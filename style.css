@@ -11,7 +11,8 @@ body {
 h1 {
     text-align: center;
     margin: 20px 0;
-    font-size: 150%; /* Increase the font size by 75% */
+    font-size: 200%; /* Increase the font size by 75% */
+    color: red;
 }
 
 .container {
