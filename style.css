@@ -58,7 +58,10 @@ h1 {
 }
 
 
-/* ... Previous CSS ... */
+.section, .section h2 {
+    border: 1px solid #000;
+}
+
 
 @media (min-width: 768px) and (max-width: 991px) {
     .container {
