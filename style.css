@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif; /* Set your desired font-family here */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 150%; /* Increase the font size by 75% */
+}
+
+.container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+
+.section {
+    flex: 1;
+    background-color: #3498db;
+    border: 1px solid #000;
+    padding: 20px;
+    position: relative;
+    margin: 10px;
+    color: #fff;
+}
+
+.section h2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 125%; /* Increase the font size by 25% */
+}
+
+.section p {
+    margin-top: 40px; /* Adjust the margin to provide space below the h2 */
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .section {
+        flex: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+/* ... Previous CSS ... */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        margin: 0 25px; /* Add a 25px margin to both sides in mobile view */
+        display: flex;
+        flex-wrap: wrap; /* Allow sections to wrap to the next line */
+        flex-direction: row;
+    }
+
+    .section {
+        width: calc(50% - 20px); /* 50% minus margin to fit two sections side by side */
+        margin: 0 10px 20px 0; /* Add margin to the right and bottom of each section */
+    }
+
+    .section:nth-child(3) {
+        flex: 2; /* Takes twice as much space as the others */
+        width: calc(90% - 20px); /* 100% minus margin to span the full width */
+        margin: 0 10px 20px 0; /* Add margin to the right and bottom of each section */
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .container {
+        margin: 0 25px; /* Add a 10px margin to both sides in mobile view */
+    }
+
+    .section h2 {
+        font-size: 1rem;
+    }
+}
